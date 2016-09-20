@@ -24,7 +24,7 @@
       left: 10%;
       top: 50%;
 
-      z-index: 2;
+      z-index: 3;
     }
 
     #sergio {
@@ -41,10 +41,27 @@
 
       z-index: 1;
     }
+
+    #overlay {
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.7)
+      );
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      z-index: 2;
+    }
   </style>
 </head>
 <body>
   <img id="sergio" src="sergio.png" />
+  <div id="overlay"></div>
   <img id="heading" src="heading.png" alt="Under Construction" />
 </body>
 </html>
