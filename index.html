@@ -12,25 +12,49 @@
       background-repeat: repeat;
     }
 
-    #heading {
+    div, img {
       margin: 0;
       padding: 0;
+    }
 
+    #heading-compact {
       width: 80%;
       height: auto;
-      min-width: 480px;
 
+      margin: auto;
       position: absolute;
-      left: 10%;
-      top: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
 
       z-index: 3;
     }
 
-    #sergio {
-      margin: 0;
-      padding: 0;
+    #heading-wide {
+      display: none;
 
+      width: 80%;
+      height: auto;
+
+      position: absolute;
+      left: 10%;
+      top: 55%;
+
+      z-index: 3;
+    }
+
+    @media (min-width: 640px) {
+      #heading-wide {
+        display: block;
+      }
+
+      #heading-compact {
+        display: none;
+      }
+    }
+
+    #sergio {
       width: auto;
       height: 95%;
       min-height: 480px;
@@ -62,6 +86,7 @@
 <body>
   <img id="sergio" src="sergio.png" />
   <div id="overlay"></div>
-  <img id="heading" src="heading.png" alt="Under Construction" />
+  <img id="heading-wide" src="heading-wide.png" alt="Under Construction" />
+  <img id="heading-compact" src="heading-compact.png" alt="Under Construction" />
 </body>
 </html>
